@@ -1,5 +1,5 @@
-pm2-gelf
-=================
+**pm2-gelf-pretty**
+-----------------
 
 An library to redirect your [PM2](http://pm2.io) logs to a [GELF](http://docs.graylog.org/en/latest/pages/gelf.html) input stream
 
@@ -11,9 +11,9 @@ An library to redirect your [PM2](http://pm2.io) logs to a [GELF](http://docs.gr
 Tested on node-4.5.x, requires pm2.
 
 ```sh
-  pm2 install pm2-gelf
+  pm2 install pm2-gelf-pretty
 ```
-
+__
 ## Configuration
 
 This module has multiple configuration variables, all fed into gelf-node
@@ -28,12 +28,12 @@ This module has multiple configuration variables, all fed into gelf-node
 After having installed the module:
 
 ```sh
-  pm2 set pm2-gelf:<param> <value>
+  pm2 set pm2-gelf-pretty:<param> <value>
 ```
 
 Examples:
 
 ```sh
-  pm2 set pm2-gelf:graylogHostname my.cool.host
-  pm2 set pm2-gelf:graylogPort 12345
+  pm2 set pm2-gelf-pretty:graylogHostname my.cool.host
+  pm2 set pm2-gelf-pretty:graylogPort 12345
 ```
