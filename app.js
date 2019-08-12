@@ -1,11 +1,9 @@
 /* eslint-disable no-alert, no-console */
 'use strict';
 const pm2 = require('pm2');
-const pmx = require('pmx');
 const os = require('os');
 const hostname = os.hostname();
 
-const conf = pmx.initModule();
 
 var Gelf = require('gelf');
 var gelf = new Gelf({
@@ -31,7 +29,8 @@ pm2.Client.launchBus(function(err, bus) {
                 'timestamp': (log.at / 1000),
                 'short_message': log.data,
                 'level': 1,
-                'facility': log.process.name
+                'facility': log.process.name,
+                'app': log.process.name
             };
             gelf.emit('gelf.log', message);
         }
@@ -47,7 +46,8 @@ pm2.Client.launchBus(function(err, bus) {
                 'timestamp': (log.at / 1000),
                 'short_message': log.data,
                 'level': 3,
-                'facility': log.process.name
+                'facility': log.process.name,
+                'app': log.process.name
             };
             gelf.emit('gelf.log', message);
         }

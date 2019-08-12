@@ -1,7 +1,7 @@
 pm2-gelf
 =================
 
-An quick and dirty library to redirect your [PM2](http://pm2.io) logs to a [GELF](http://docs.graylog.org/en/latest/pages/gelf.html) input stream
+An library to redirect your [PM2](http://pm2.io) logs to a [GELF](http://docs.graylog.org/en/latest/pages/gelf.html) input stream
 
 * Heavily based on [https://github.com/dfrankland/pm2-loggly](https://github.com/dfrankland/pm2-loggly)
 * Uses [https://github.com/robertkowalski/gelf-node](https://github.com/robertkowalski/gelf-node) to output to GELF
